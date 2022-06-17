@@ -33,6 +33,8 @@ footer {
     width: 250px;
     background-color: var(--black-color);
     height: 100%;
+    display:flex;
+    flex-direction: column;
 }
 .logo {
     width: 100%;
@@ -72,13 +74,17 @@ footer {
     background-color:/*rgb(2, 2, 29)*/ blue;
     overflow: auto;
     height: 100%;
+    position: relative;
+    padding-top: 3.5rem;
 }
 .action-bar {
-    width: 100%;
+    width:calc(100% - 250px);
     background-color: rgba(0, 0, 0, 0.411);
     text-align: right;
     padding: 1rem;
     font-size: 20px;
+    position: fixed;
+    top:0;
 }
 .nav-main ul li a {
     color: #fff;
@@ -88,6 +94,7 @@ footer {
 .nav-main ul {
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
 }
 .nav-main {
     display: flex;
@@ -125,6 +132,16 @@ footer {
     }
     .playlist{
         width: calc(100% - 50px);
+    }
+}
+
+/*TABLET*/
+@media screen and (max-width: 767px) {
+    .cards{
+        flex-wrap: wrap;
+    }
+    .card {
+        width: calc(100% / 4 - 1rem);
     }
 }
     
