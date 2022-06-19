@@ -95,6 +95,7 @@ footer {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .nav-main {
     display: flex;
@@ -131,6 +132,9 @@ footer {
         width: 50px;
     }
     .playlist{
+        width: calc(100% - 50px);
+    }
+    .main-content, .action-bar{
         width: calc(100% - 50px);
     }
 }
