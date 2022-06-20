@@ -175,11 +175,11 @@ html{
     margin-right: 1rem;
     width: calc(100% / 6 - 1rem);
 }
-.card-image:hover {
-    background-color: rgba(0, 0, 0, 0.432);
-}
 .card-image img {
     width: 100%;
+}
+.card-image:hover{
+    background-color: rgba(0, 0, 0, 0.404);
 }
 .radius {
     border-radius: 50%;
