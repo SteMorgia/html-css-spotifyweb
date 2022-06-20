@@ -9,7 +9,7 @@
 :root {
     --black-color: #000; 
     --white-color: #fff;
-    --gray-color: #333;
+    --gray-color: rgb(170, 170, 170);
 }
 
 /*regole comuni*/
@@ -25,11 +25,7 @@ html{
     font-family: 'Montserrat', sans-serif;
 }
 
-footer {
-    width: 100%;
-    height: 10vh;
-    background-color: var(--gray-color);
-}
+
 
 /*regole sidebar*/
 .sidebar {
@@ -38,27 +34,40 @@ footer {
     height: 100%;
     display:flex;
     flex-direction: column;
+    position: relative;
 }
 .logo {
     width: 100%;
-    background-color:brown;
     color: var(--white-color);
     font-size: 30px;
     padding: 1rem;
-    height: 10%;
+    
+    flex-shrink: 0;
+}
+.logo img {
+    width: 80%;
 }
 .nav {
     width: 100%;
-    background-color: coral;
     color: var(--white-color);
     font-size: 20px;
     padding: 1rem;
-    height: 15%;
+    flex-shrink: 0;
+}
+.nav-content, .playlist-content {
+    margin-bottom: 0.8rem;
+}
+.nav-content a, .playlist-content a, .user-content{
+    text-decoration: none;
+    color: var(--gray-color);
+}
+.backgr {
+    color: #000;
+    background-color: var(--gray-color);
+    padding: 0.6rem;
 }
 .playlist {
     width: 100%;
-    height: 60%;
-    background-color: blueviolet;
     color: var(--white-color);
     font-size: 20px;
     padding: 1rem;
@@ -66,17 +75,35 @@ footer {
 }
 .user {
     width: 100%;
-    height:15%;
-    background-color: chartreuse;
+    height:10%;
     color: var(--white-color);
     font-size: 17px;
     padding: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+}
+.user-content {
+    padding: 10px 0 ;
+}
+.user-content img {
+    width: 10%;
+}
+.username {
+    color: var(--white-color);
+}
+.circle {
+    background-color: var(--gray-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
 }
 
 /*regole main content*/
 .main-content {
     width: calc(100% - 250px);
-    background-color:/*rgb(2, 2, 29)*/ blue;
+    background-color:rgb(2, 2, 29);
     overflow: auto;
     height: 100%;
     position: relative;
@@ -91,11 +118,19 @@ footer {
     position: fixed;
     top:0;
 }
+.btn {
+    border: solid 2px var(--white-color);
+    padding: 0.5rem 1.5rem;
+    color: var(--white-color);
+    border-radius: 20px;
+    font-size: 15px;
+}
 .nav-main ul li a {
-    color: #fff;
+    color: var(--gray-color);
     text-decoration: none;
     padding: 1rem;
 }
+.nav-main ul li a:hover
 .nav-main ul {
     display: flex;
     list-style-type: none;
@@ -116,21 +151,57 @@ footer {
 .box h2 {
     color: var(--white-color);
 }
+.box p {
+    color: var(--gray-color);
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+}
 .cards {
     width: 100%;
     display: flex;
-    background-color: deeppink;
     margin-top: 1rem;
 }
 .card {
     margin-right: 1rem;
     width: calc(100% / 6 - 1rem);
-    background-color: aqua;
-    height: 200px; /*togliere height*/
+}
+.card-image img {
+    width: 100%;
+}
+.card-text {
+    text-align: center;
+}
+.card-text h3 {
+    color: var(--white-color);
+    
+}
+.card-text h4 {
+    color: var(--gray-color);
+    font-size: small;
+    padding-top: 10px;
 }
 
+/*regole footer*/
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--gray-color);
+}
 
 /*media query*/
+/*TABLET*/
+@media screen and (max-width: 767px) {
+    .cards{
+        flex-wrap: wrap;
+    }
+    .card {
+        width: calc(100% / 4 - 1rem);
+    }
+    h3 {
+        font-size: small;
+    }
+}
+
 /*MOBILE*/
 @media screen and (max-width: 576px) {
     .sidebar{
@@ -148,15 +219,10 @@ footer {
     .cards{
         flex-wrap: wrap;
     }
+    h4{
+        margin-bottom: 0.7rem;
+    }
 }
 
-/*TABLET*/
-@media screen and (max-width: 767px) {
-    .cards{
-        flex-wrap: wrap;
-    }
-    .card {
-        width: calc(100% / 4 - 1rem);
-    }
-}
+
     
