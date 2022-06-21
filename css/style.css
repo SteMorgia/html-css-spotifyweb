@@ -107,11 +107,12 @@ html{
 }
 .circle {
     background-color: var(--gray-color);
-    padding: 0.5rem;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    margin-right: 1rem;
+}
+.circle img{
+    border-radius: 50%;
 }
 
 /*regole main content*/
@@ -131,6 +132,7 @@ html{
     font-size: 20px;
     position: fixed;
     top:0;
+    z-index: 9999;
 }
 .btn {
     border: solid 2px var(--white-color);
@@ -215,11 +217,12 @@ html{
     display: none;
 }
 .hover-button {
-    font-size: 70px;
+    font-size: 50px;
     color: var(--white-color);
-    top: 37%;
-    left: 37%;
+    top: 50%;
+    left: 50%;
     position: absolute;
+    transform: translate(-50%,-50%);
 }
 .card-image:hover .hover{
     display: block;
@@ -302,6 +305,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .icona-white{
     margin-left: 15px;
@@ -325,6 +329,13 @@ footer {
     }
     h3 {
         font-size: small;
+    }
+    .hover-button {
+        font-size: 30px;
+        color: var(--white-color);
+        top: 35%;
+        left: 36%;
+        position: absolute;
     }
 }
 
@@ -358,7 +369,24 @@ footer {
     h4{
         margin-bottom: 0.7rem;
     }
+    .hover-button {
+        font-size: 70px;
+        color: var(--white-color);
+        top: 35%;
+        left: 36%;
+        position: absolute;
+    }
+    .circle {
+        background-color: var(--gray-color);
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+    }
+    .button{
+        font-size: 19px;
+    } 
+    
+     
 }
-
 
     
