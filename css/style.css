@@ -44,6 +44,9 @@ html{
     padding: 1rem;
     flex-shrink: 0;
 }
+.logo-none {
+    display: none;
+}
 .logo img {
     width: 80%;
 }
@@ -93,9 +96,11 @@ html{
 }
 .user-content {
     padding: 10px 0 ;
+    display: flex;
+    align-items: center;
 }
-.user-content img {
-    width: 10%;
+.user-content .cirle img {
+    width: 100%;
 }
 .username {
     color: var(--white-color);
@@ -104,8 +109,9 @@ html{
     background-color: var(--gray-color);
     padding: 0.5rem;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
 }
 
 /*regole main content*/
@@ -208,8 +214,15 @@ html{
     left: 0;
     display: none;
 }
-.card-image img:hover + .hover{
-    display:block;
+.hover-button {
+    font-size: 70px;
+    color: var(--white-color);
+    top: 37%;
+    left: 37%;
+    position: absolute;
+}
+.card-image:hover .hover{
+    display: block;
 }
 
 
@@ -251,7 +264,6 @@ footer {
 }
 .player{
     width: 30%;
-    background-color: aqua;
     height: 100%;
 }
 .player-btn {
@@ -271,21 +283,36 @@ footer {
     margin-top: 0.5rem;
 }
 .bar {
-    width: 70%;
-    border: solid 2px var(--gray-color);
+    width: 80%;
+    background-color:var(--gray-color);
     position: relative;
+    height: 5px;
 }
 .over-bar{
     position: absolute;
     width: 30%;
     left: 0;
     top:0;
-    border: solid 2px lightgreen;
+    background-color:lightgreen;
+    height: 5px;
 }
 .right-player{
     width: 15%;
-    background-color: aqua;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icona-white{
+    margin-left: 15px;
+    color: var(--white-color);
+}
+.bar-right{
+    width: 40%;
+    background-color:var(--gray-color);
+    position: relative;
+    height: 5px;
+    margin-left:10px;
 }
 /*media query*/
 /*TABLET*/
@@ -306,8 +333,18 @@ footer {
     .sidebar{
         width: 50px;
     }
+    .logo-none {
+        display: block;
+        padding: 5px;
+    }
+    .logo {
+        display: none;
+    }
+    .hide {
+        display: none;
+    }
     .playlist{
-        width: 100%;
+        display: none;
     }
     .main-content, .action-bar{
         width: calc(100% - 50px);
